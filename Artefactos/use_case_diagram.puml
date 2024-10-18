@@ -1,0 +1,17 @@
+
+@startuml
+actor "Vendedor/Empleado" as Vendor
+
+usecase "Registrar Cliente" as UC1
+usecase "Realizar Pedido" as UC2
+usecase "Generar Factura" as UC3
+usecase "Gestionar Inventario" as UC4
+usecase "Seguimiento del Pedido" as UC5
+
+Vendor --> UC1
+Vendor --> UC2
+Vendor --> UC3
+Vendor --> UC4
+Vendor --> UC5
+
+@enduml
