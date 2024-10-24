@@ -13,3 +13,12 @@
 
 # Archivos de conexión a la base de datos
 conexion.php
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
