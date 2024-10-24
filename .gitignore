@@ -1,0 +1,15 @@
+# Archivos y carpetas de configuración local
+/.vscode/
+/.env
+/config/*.json
+
+# Logs y temporales
+*.log
+/tmp/
+*.cache
+
+# Archivos de XAMPP
+/htdocs/test/*
+
+# Archivos de conexión a la base de datos
+conexion.php

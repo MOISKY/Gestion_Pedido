@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleForm.css">
+  <title>Crear Ticket</title>
+</head>
+<body>
+  <h2>Crear Nuevo Ticket</h2>
+  <form action="procesar_ticket.php" method="POST" onsubmit="return validarFormulario()">
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
+
+    <label for="asunto">Asunto:</label>
+    <select id="asunto" name="asunto" required>
+      <option value="Soporte Técnico">Soporte Técnico</option>
+      <option value="Consulta General">Consulta General</option>
+      <option value="Mantenimiento">Mantenimiento</option>
+      <option value="Otro">Otro</option>
+    </select>
+
+    <label for="empleado">Asignar a Empleado:</label>
+    <input type="number" id="empleado" name="empleado" placeholder="ID del empleado" min="1" required>
+
+    <label for="limiteEntrega">Límite de Vida (Fecha Límite):</label>
+    <input type="date" id="limiteEntrega" name="limiteEntrega" required>
+
+    <input type="submit" value="Crear Ticket">
+  </form>
+
+  <script>
+    function validarFormulario() {
+      const descripcion = document.getElementById('descripcion').value.trim();
+      const empleadoId = document.getElementById('empleado').value;
+
+      if (descripcion.length < 10) {
+        alert("La descripción debe tener al menos 10 caracteres.");
+        return false;
+      }
+
+      if (empleadoId <= 0) {
+        alert("El ID del empleado debe ser un número válido.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
